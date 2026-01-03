@@ -15,19 +15,17 @@ interface ProductApiService {
     suspend fun getProducts() : List<Product>
 
     @GET("products/{id}")
-    suspend fun getProduct(@Path("id") id : Int) : Product
+    suspend fun getProduct(@Path("id")id : Int): Product
 
     @POST("products")
     suspend fun createProduct(@Body product: Product) : Product
 
     @PUT("products/{id}")
-    suspend fun updateProduct(@Path("id") id : Int , @Body product: Product) : Product
+    suspend fun updateProduct(@Path("id") id : Int, @Body product: Product) : Product
 
     @PATCH("products/{id}")
-    suspend fun patchProduct(@Path("id") id : Int, @Body updates : Map<String,Any>) : Product
+    suspend fun patchProduct(@Path("id")id : Int, @Body updates: Map<String, Any>) : Product
 
     @DELETE("products/{id}")
-    suspend fun deleteProduct(@Path("id") id : Int ) : Product
-
-
+    suspend fun deletedProduct(@Path("id") id : Int) : Product
 }
