@@ -1,4 +1,4 @@
-package com.example.retrofit_appdhara.ui.theme
+package com.example.retrofit_appdhara.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
