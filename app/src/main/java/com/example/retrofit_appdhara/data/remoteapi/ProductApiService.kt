@@ -24,7 +24,7 @@ interface ProductApiService {
     suspend fun updateProduct(@Path("id") id : Int, @Body product: Product) : Product
 
     @PATCH("products/{id}")
-    suspend fun patchProduct(@Path("id")id : Int, @Body updates: Map<String, Any>) : Product
+    suspend fun patchProduct(@Path("id")id : Int, @Body updates: Map<String, @JvmSuppressWildcards Any>) : Product
 
     @DELETE("products/{id}")
     suspend fun deletedProduct(@Path("id") id : Int) : Product
